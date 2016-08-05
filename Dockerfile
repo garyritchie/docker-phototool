@@ -13,9 +13,8 @@ RUN cd /epeg && \
 	&& make .. \
 	&& make install
 
-COPY scripts /scripts
-
-RUN chmod u+x -R /scripts
+RUN mkdir /scripts
+VOLUME /scripts
 
 RUN mkdir /photos
 VOLUME /photos
